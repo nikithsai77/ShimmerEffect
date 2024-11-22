@@ -64,8 +64,8 @@ fun Modifier.shimmerEffect() : Modifier = composed {
     background(
         brush = Brush.linearGradient(
             colors = listOf(Color(color = 0xFFB8B5B5), Color(color = 0xFF8F8B8B), Color(color = 0xFFB8B5B5)),
-            start = Offset(x = startOffsetX,  y = 0f),
-            end = Offset(x = startOffsetX + size.width.toFloat(), y = startOffsetX + size.height.toFloat())
+            start = Offset.Zero,
+            end = Offset(x = startOffsetX, y = startOffsetX)
         )
     ).onGloballyPositioned {
         size  = it.size
